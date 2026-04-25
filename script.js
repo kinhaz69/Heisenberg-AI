@@ -1,4 +1,20 @@
 /* =========================================================
+   🔐 CARREGAR API KEY (ADICIONADO)
+   ========================================================= */
+let API_KEY = "";
+
+async function carregarChave() {
+  try {
+    const res = await fetch("keys.json");
+    const data = await res.json();
+    API_KEY = data.azure;
+  } catch (e) {
+    console.error("Erro ao carregar keys.json:", e);
+  }
+}
+
+
+/* =========================================================
    💬 ADICIONAR MENSAGEM NA TELA
    ========================================================= */
 function addMessage(text, className) {
@@ -32,7 +48,7 @@ async function enviarMensagemAzure(mensagem) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer "
+        "Authorization": `Bearer ${API_KEY}` // 👈 ALTERAÇÃO NECESSÁRIA
       },
       body: JSON.stringify({
         input: [
@@ -82,7 +98,9 @@ async function sendMessage() {
 /* =========================================================
    🎧 EVENTOS DA PÁGINA
    ========================================================= */
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", async function() {
+
+  await carregarChave(); // 👈 ADICIONADO
 
   // ENTER envia
   const inputField = document.getElementById('input');
