@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Heinsenberg AI</title>
+
+  <!-- CSS correto -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- LOGO como favicon (não como stylesheet) -->
+  <link rel="icon" href="https://static.wikia.nocookie.net/vsbattles/images/9/94/Breaking-bad-png-file-breaking-bad-logo-png-2000.png/revision/latest/scale-to-width-down/340?cb=20190924173219">
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="sidebar">
+    <div class="brand-header">
+      <img src="https://static.wikia.nocookie.net/vsbattles/images/9/94/Breaking-bad-png-file-breaking-bad-logo-png-2000.png/revision/latest/scale-to-width-down/340?cb=20190924173219" alt="Logo BrBa" class="logo">
+      <span class="subtitle">Say my name</span>
+    </div>
+
+    <h2>Heinsenberg AI</h2>
+    <button class="new-chat" type="button">+ Nova Conversa</button>
+
+    <div class="menu">
+      <p><strong>Cursos Disponíveis</strong></p>
+      <span>Quais cursos são mais relevantes?</span>
+    </div>
+
+    <div class="sidebar-footer">
+      <p>© 2026 Blue Sky</p>
+    </div>
+  </div>
+
+  <div class="chat-area">
+    <div class="top-bar">
+      <button class="theme-toggle" title="Alternar Tema" type="button">🌙</button>
+    </div>
+
+    <!-- HEADER DO CHAT -->
+    <div class="chat-header">
+      <img src="https://i.redd.it/walter-white-the-never-ending-3d-portrait-adding-pre-cancer-v0-fbmk981sxr091.jpg?width=4063&format=pjpg&auto=webp&s=a9b8dfdcb79ce3f6db2910c50b9613e23550a92e" 
+           class="bot-icon">
+      <span>Heisenberg</span>
+    </div>
+
+    <div class="messages" id="messages"></div>
+
+    <div class="input-area">
+      <input type="text" id="input" placeholder="Digite sua mensagem...">
+      
+      <!-- botão enviar -->
+      <button type="button" onclick="sendMessage()">➤</button>
+      
+      <!-- botão microfone -->
+      <button id="micBtn" type="button">🎤</button>
+    </div>
+
+    <div class="chat-footer">
+      <p>O Heinsenberg não comete erros. Verifique você mesmo.</p>
+      <button class="help-btn" title="Ajuda" type="button">?</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+</html>
